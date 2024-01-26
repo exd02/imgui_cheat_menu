@@ -20,6 +20,7 @@ private:
 	static IDXGISwapChain* g_pSwapChain;
 	static UINT g_ResizeWidth, g_ResizeHeight;
 	static ID3D11RenderTargetView* g_mainRenderTargetView;
+	static ImGuiWindowFlags window_flags;
 
 	// Windows
 	static WNDCLASSEXW wc; // Window Class

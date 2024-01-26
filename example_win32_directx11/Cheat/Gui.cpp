@@ -9,6 +9,7 @@ ID3D11DeviceContext* Gui::g_pd3dDeviceContext = nullptr;
 IDXGISwapChain* Gui::g_pSwapChain = nullptr;
 UINT Gui::g_ResizeWidth = 0, Gui::g_ResizeHeight = 0;
 ID3D11RenderTargetView* Gui::g_mainRenderTargetView = nullptr;
+ImGuiWindowFlags Gui::window_flags = 0;
 
 HWND Gui::hwnd = nullptr;
 WNDCLASSEX Gui::wc = { };
@@ -127,6 +128,8 @@ void Gui::CreateImGui()
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
 
+    window_flags |= ImGuiWindowFlags_NoCollapse;
+
     // Setup Dear ImGui style
     ImGui::StyleColorsDark();
     //ImGui::StyleColorsLight();
@@ -192,7 +195,7 @@ void Gui::Render()
 
     static bool outlineBox;
 
-    ImGui::Begin("Cheat Menu!");
+    ImGui::Begin("Cheat Menu!", 0, window_flags);
     ImGui::SeparatorText("ESP");
 
     ImGui::Checkbox("Outline Box", &outlineBox);
