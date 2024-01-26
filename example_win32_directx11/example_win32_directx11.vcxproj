@@ -153,7 +153,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Cheat\Gui.cpp" />
-    <ClCompile Include="Cheat\Memory.cpp" />
     <ClCompile Include="ImGui\imgui.cpp" />
     <ClCompile Include="ImGui\imgui_demo.cpp" />
     <ClCompile Include="ImGui\imgui_draw.cpp" />
@@ -165,7 +164,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cheat\Gui.h" />
-    <ClInclude Include="Cheat\Memory.h" />
     <ClInclude Include="ImGui\imconfig.h" />
     <ClInclude Include="ImGui\imgui.h" />
     <ClInclude Include="ImGui\imgui_impl_dx11.h" />

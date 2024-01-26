@@ -17,7 +17,6 @@
     <ClCompile Include="ImGui\imgui_tables.cpp" />
     <ClCompile Include="ImGui\imgui_widgets.cpp" />
     <ClCompile Include="Cheat\Gui.cpp" />
-    <ClCompile Include="Cheat\Memory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ImGui\imconfig.h" />
@@ -26,6 +25,5 @@
     <ClInclude Include="ImGui\imgui_impl_win32.h" />
     <ClInclude Include="ImGui\imgui_internal.h" />
     <ClInclude Include="Cheat\Gui.h" />
-    <ClInclude Include="Cheat\Memory.h" />
   </ItemGroup>
 </Project>
