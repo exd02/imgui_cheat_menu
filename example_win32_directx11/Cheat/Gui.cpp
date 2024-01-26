@@ -1,6 +1,7 @@
 #include "Gui.h"
 
 bool Gui::isRunning = true;
+bool Gui::showInterface = true;
 
 // Data
 ID3D11Device* Gui::g_pd3dDevice = nullptr;
@@ -187,7 +188,20 @@ void Gui::EndRender()
 
 void Gui::Render()
 {
-    ImGui::Begin("This is a cheat menu!");
+    if (!showInterface) return;
+
+    static bool outlineBox;
+
+    ImGui::Begin("Cheat Menu!");
     ImGui::SeparatorText("ESP");
+
+    ImGui::Checkbox("Outline Box", &outlineBox);
+    
+    if (outlineBox) {
+        static int e = 0;
+        ImGui::SameLine(); ImGui::RadioButton("2D Frame", &e, 0);
+        ImGui::SameLine(); ImGui::RadioButton("3D Frame", &e, 1);
+    }
+
     ImGui::End();
 }

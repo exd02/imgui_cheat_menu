@@ -29,6 +29,8 @@ private:
 
 public:
 	static bool isRunning;
+	static bool showInterface;
+
 	static void CreateHWindow(const wchar_t* windowName);
 	static void DestroyHWindow();
 

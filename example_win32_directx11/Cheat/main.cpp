@@ -1,5 +1,12 @@
 #include "Gui.h"
 
+void toggleInterfaceOnKey(int key)
+{
+    if (GetAsyncKeyState(key) & 1) {
+        Gui::showInterface = !Gui::showInterface;
+    }
+}
+
 // Main code
 int __stdcall wWinMain(
     HINSTANCE instance,
@@ -12,9 +19,13 @@ int __stdcall wWinMain(
     Gui::CreateImGui();
 
     while (Gui::isRunning) {
+        toggleInterfaceOnKey(VK_INSERT);
+
         Gui::BeginRender();
         Gui::Render();
         Gui::EndRender();
+
+        // TODO: add timer in loop
     }
 
     Gui::DestroyImGui();
